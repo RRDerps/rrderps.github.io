@@ -3,61 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Emma’s Bag of Holding</title>
   <style>
-    body {
+    :root {
+      --primary-color: #ffffff;
+      --accent-pink: #f8c8dc;
+      --accent-lime: #d4f7c5;
+      --text-color: #2b2b2b;
+      --light-gray: #f1f1f1;
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      background-color: #ffe6f0; /* pastel pink */
-      font-family: Arial, sans-serif;
-      color: #333;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--accent-pink), var(--accent-lime));
+      padding: 1.5rem 2rem;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      min-height: 100vh;
-      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #2b2b2b;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #555;
     }
 
     .container {
-      background-color: #f0ffe6; /* pastel lime green */
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      max-width: 600px;
-      width: 90%;
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 2rem;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    a.button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #ffccdd; /* lighter pink */
-      color: #333;
-      text-decoration: none;
+    .about {
+      background-color: var(--light-gray);
+      border-left: 6px solid var(--accent-pink);
+      padding: 2rem;
       border-radius: 10px;
-      font-weight: bold;
-      transition: background-color 0.3s;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
     }
 
-    a.button:hover {
-      background-color: #ffddee;
+    .about h2 {
+      color: #d4f7c5;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: linear-gradient(to right, var(--accent-lime), var(--accent-pink));
+      color: #333;
+      text-align: center;
+      padding: 1.2rem 0;
+      margin-top: 4rem;
+      font-size: 0.95rem;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-end;
+      }
+
+      nav a {
+        margin-left: 0;
+      }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Emma’s Bag of Holding</h1>
+    <nav>
+      <a href="#game-dev">Game Development</a>
+      <a href="#ttrpgs">TTRPGs</a>
+    </nav>
+  </header>
+
   <div class="container">
-    <h1>Placeholder Name</h1>
-    <p>Placeholder description text. This is where you can introduce yourself or your work.</p>
-    <a href="#" class="button">View My Work</a>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        Hi! I’m Emma (she/her).
+      </p>
+    </section>
   </div>
+
+  <footer>
+    <p>&copy; 2025 Emma’s Bag of Holding. All rights reserved.</p>
+  </footer>
 </body>
 </html>
